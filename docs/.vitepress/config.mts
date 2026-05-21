@@ -59,7 +59,8 @@ export default defineConfig({
       {
         text: 'その他',
         items: [
-    	　{ text: '更新履歴', link: '/updates' },
+   　　　 { text: 'この教材について', link: '/about' },  
+  	　{ text: '更新履歴', link: '/updates' },
           { text: '誤植・改善報告', link: '/feedback' },
           { text: '出典・謝辞', link: '/credits' }
         ]
