@@ -24,6 +24,19 @@ features:
     details: 東大数学の過去問を題材に、初見問題への方針の立て方を学びます。
 ---
 
+## テーマ別に読む
+
+検索や苦手分野から入る場合は、まず短い入口記事から読むのがおすすめです。
+
+- [座標化・1変数化とは](./articles/coordinate-one-variable.md)
+- [領域化・範囲決定とは](./articles/region-range.md)
+- [微積分・面積体積・極限の考え方](./articles/calculus-area-volume-limit.md)
+- [整数・合同式・場合分けの考え方](./articles/integer-mod-cases.md)
+- [確率・状態遷移・漸化式の考え方](./articles/probability-recurrence.md)
+- [関数・接線条件の考え方](./articles/function-tangent.md)
+- [空間図形・断面・体積の考え方](./articles/spatial-geometry.md)
+- [対称性・変換・複素数・行列の考え方](./articles/symmetry-transform.md)
+
 ## 目的別に読む
 
 自分の苦手分野や、いま伸ばしたい力に合わせて読む章を選べます。

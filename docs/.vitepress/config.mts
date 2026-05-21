@@ -21,6 +21,25 @@ export default defineConfig({
     ],
 
     sidebar: [
+          {
+        text: 'はじめに',
+        items: [
+          { text: '東大数学の勉強法', link: '/articles/todai-math-study-roadmap' }
+        ]
+      },
+      {
+        text: 'テーマ別入口',
+        items: [
+          { text: '座標化・1変数化', link: '/articles/coordinate-one-variable' },
+          { text: '領域化・範囲決定', link: '/articles/region-range' },
+          { text: '微積分・面積体積・極限', link: '/articles/calculus-area-volume-limit' },
+          { text: '整数・合同式・場合分け', link: '/articles/integer-mod-cases' },
+          { text: '確率・状態遷移・漸化式', link: '/articles/probability-recurrence' },
+          { text: '関数・接線条件', link: '/articles/function-tangent' },
+          { text: '空間図形・断面・体積', link: '/articles/spatial-geometry' },
+          { text: '対称性・変換・複素数・行列', link: '/articles/symmetry-transform' }
+        ]
+      },
       {
         text: '本文',
         items: [
