@@ -17,6 +17,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: '更新履歴', link: '/updates' },
       { text: '出典・謝辞', link: '/credits' }
     ],
 
@@ -57,6 +58,7 @@ export default defineConfig({
       {
         text: 'その他',
         items: [
+    	　{ text: '更新履歴', link: '/updates' },
           { text: '出典・謝辞', link: '/credits' }
         ]
       }
