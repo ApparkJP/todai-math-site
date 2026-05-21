@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>東大数学 過去問分類統計</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+    .wrap {
+      padding: 12px;
+    }
+    .control {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    select {
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+    #chart {
+      width: 100%;
+      height: 620px;
+    }
+    .note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="control">
+      <label for="mode">表示：</label>
+      <select id="mode">
+        <option value="decade" selected>年代別</option>
+        <option value="year">年度別</option>
+      </select>
+    </div>
+
+    <div id="chart"></div>
+
+    <div class="note">
+      凡例をクリックすると、各年代・年度の表示/非表示を切り替えられます。
+      棒にカーソルを合わせると件数を確認できます。
+    </div>
+  </div>
+
+  <script>
+    const basePath = "/todai-math-site/";
+
+    async function loadData(mode) {
+      const file =
+        mode === "year"
+          ? "stats-mainarea-by-year.json"
+          : "stats-mainarea-by-decade.json";
+
+      const res = await fetch(basePath + file);
+      return await res.json();
+    }
+
+    function render(data, mode) {
+      const traces = data.series.map((s) => ({
+        x: data.areas,
+        y: s.values,
+        name: String(s.name),
+        type: "bar",
+        hovertemplate:
+          "分野: %{x}<br>" +
+          (mode === "year" ? "年度" : "年代") +
+          ": " + s.name + "<br>" +
+          "問題数: %{y}<extra></extra>",
+      }));
+
+      const layout = {
+        title: {
+          text:
+            mode === "year"
+              ? "東大数学 過去問分類：分野別問題数（年度別積み上げ）"
+              : "東大数学 過去問分類：分野別問題数（年代別積み上げ）",
+          x: 0.02,
+          xanchor: "left",
+        },
+        barmode: "stack",
+        margin: { l: 60, r: 24, t: 70, b: 150 },
+        xaxis: {
+          title: "分野",
+          tickangle: -35,
+          automargin: true,
+        },
+        yaxis: {
+          title: "問題数",
+          rangemode: "tozero",
+        },
+        legend: {
+          orientation: "h",
+          y: -0.35,
+        },
+        hovermode: "closest",
+      };
+
+      const config = {
+        responsive: true,
+        displaylogo: false,
+        modeBarButtonsToRemove: ["lasso2d", "select2d"],
+        toImageButtonOptions: {
+          format: "png",
+          filename: "todai-math-stats",
+          height: 900,
+          width: 1400,
+          scale: 2,
+        },
+      };
+
+      Plotly.react("chart", traces, layout, config);
+    }
+
+    async function update() {
+      const mode = document.getElementById("mode").value;
+      const data = await loadData(mode);
+      render(data, mode);
+    }
+
+    document.getElementById("mode").addEventListener("change", update);
+    update();
+  </script>
+</body>
+</html>

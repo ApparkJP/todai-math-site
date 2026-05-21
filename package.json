@@ -2,7 +2,8 @@
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
     "sharp": "^0.34.5",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
