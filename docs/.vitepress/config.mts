@@ -6,6 +6,10 @@ export default defineConfig({
 
   base: '/todai-math-site/',
 
+  sitemap: {
+    hostname: 'https://apparkjp.github.io/todai-math-site/'
+  },
+
   markdown: {
     math: true
   },
