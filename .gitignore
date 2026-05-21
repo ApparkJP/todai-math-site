@@ -1,0 +1,12 @@
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+.DS_Store
+
+# temporary maintenance scripts
+add-next-links.cjs
+create-topic-articles.cjs
+fix-article-md-indent.cjs
+fix-md-indent.cjs
+update-frontmatter.cjs
+update-frontmatter.ps1
