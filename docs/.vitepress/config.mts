@@ -1,16 +1,16 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: '東大数学攻略本',
+  title: '東大数学　新解釈',
   description: '東大数学の過去問から、考え方を学ぶ教材',
 
   base: '/todai-math-site/',
 
   head: [
-    ['meta', { property: 'og:site_name', content: '東大数学攻略本' }],
+    ['meta', { property: 'og:site_name', content: '東大数学　新解釈' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: '東大数学攻略本｜東大数学の過去問から問題の切り方を学ぶ教材' }],
-    ['meta', { property: 'og:description', content: '東大数学の過去問を題材に、座標化・1変数化・領域化・整数・確率・空間図形など、問題の切り方から学ぶ無料教材です。' }],
+    ['meta', { property: 'og:title', content: '東大数学　新解釈｜初見問題の方針建てを明瞭に行うための教材' }],
+    ['meta', { property: 'og:description', content: '東大数学の過去問を題材に、座標化・1変数化・領域化・整数・確率・空間図形など、初見問題の方針建てを明瞭に行うための教材です。' }],
     ['meta', { property: 'og:url', content: 'https://apparkjp.github.io/todai-math-site/' }],
     ['meta', { property: 'og:image', content: 'https://apparkjp.github.io/todai-math-site/ogp.png' }],
     ['meta', { property: 'og:image:width', content: '1200' }],
@@ -18,8 +18,8 @@ export default defineConfig({
     ['meta', { property: 'og:image:alt', content: '東大数学攻略本 過去問から問題の切り方を学ぶ' }],
 
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: '東大数学攻略本｜問題の切り方を学ぶ教材' }],
-    ['meta', { name: 'twitter:description', content: '東大数学の過去問を題材に、座標化・1変数化・領域化・整数・確率などを構造から学ぶ無料教材です。' }],
+    ['meta', { name: 'twitter:title', content: '東大数学　新解釈｜初見問題の方針建てを明瞭に行うための教材' }],
+    ['meta', { name: 'twitter:description', content: '東大数学の過去問を題材に、初見問題の方針建てを明瞭に行うための教材です。' }],
     ['meta', { name: 'twitter:image', content: 'https://apparkjp.github.io/todai-math-site/ogp.png' }]
   ],
 
