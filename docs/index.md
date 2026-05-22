@@ -1,10 +1,12 @@
 ---
-layout: home
-
-hero:
-  name: "東大数学　新解釈"
-  tagline: "初見問題の方針建てを明瞭に行うための教材"
+title: "東大数学　新解釈"
+description: "初見問題の方針建てを明瞭に行うための教材"
 ---
+
+<div class="custom-hero">
+  <div class="custom-hero-title">東大数学　新解釈</div>
+  <div class="custom-hero-tagline">初見問題の方針建てを明瞭に行うための教材</div>
+</div>
 
 # この教材について
 
